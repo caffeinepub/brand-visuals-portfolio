@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.25rem;
+
+    /* Luxury palette */
+    --background: 0.967 0.012 85;
+    --foreground: 0.13 0 0;
+    --card: 0.98 0.008 85;
+    --card-foreground: 0.13 0 0;
+    --popover: 0.98 0.008 85;
+    --popover-foreground: 0.13 0 0;
+    --primary: 0.13 0 0;
+    --primary-foreground: 0.967 0.012 85;
+    --secondary: 0.94 0.01 85;
+    --secondary-foreground: 0.13 0 0;
+    --muted: 0.93 0.01 80;
+    --muted-foreground: 0.46 0 0;
+    --accent: 0.72 0.09 72;
+    --accent-foreground: 0.13 0 0;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.854 0.012 85;
+    --input: 0.854 0.012 85;
+    --ring: 0.72 0.09 72;
+
+    /* Custom luxury tokens */
+    --gold: 0.72 0.09 72;
+    --gold-light: 0.82 0.07 78;
+    --footer-bg: 0.22 0 0;
+    --footer-text: 0.918 0.012 85;
+
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.967 0.012 85;
+    --sidebar-foreground: 0.13 0 0;
+    --sidebar-primary: 0.13 0 0;
+    --sidebar-primary-foreground: 0.967 0.012 85;
+    --sidebar-accent: 0.94 0.01 85;
+    --sidebar-accent-foreground: 0.13 0 0;
+    --sidebar-border: 0.854 0.012 85;
+    --sidebar-ring: 0.72 0.09 72;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .font-display {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+@layer utilities {
+  .text-gold {
+    color: oklch(var(--gold));
+  }
+  .bg-gold {
+    background-color: oklch(var(--gold));
+  }
+  .border-gold {
+    border-color: oklch(var(--gold));
+  }
+  .hover\:border-gold:hover {
+    border-color: oklch(var(--gold));
+  }
+  .bg-footer {
+    background-color: oklch(var(--footer-bg));
+  }
+  .text-footer {
+    color: oklch(var(--footer-text));
+  }
+  .tracking-widest-plus {
+    letter-spacing: 0.2em;
+  }
+}
